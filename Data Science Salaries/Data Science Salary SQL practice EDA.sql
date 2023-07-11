@@ -234,4 +234,21 @@ GROUP BY company_size;
 
 
 
+SELECT job_title FROM data_science_salaries WHERE salary > 1000000
+UNION
+SELECT job_title FROM data_science_salaries WHERE salary_in_usd > 1000000;
+
+
+SELECT distinct(job_title) FROM data_science_salaries WHERE job_title LIKE 'Data%';
+
+SELECT distinct(job_title) FROM data_science_salaries WHERE job_title LIKE '%z%';
+
+SELECT distinct(job_title) FROM data_science_salaries WHERE job_title LIKE '%Quality%';
+
+
+
+SELECT id, job_title, salary_in_usd FROM data_science_salaries ORDER BY salary_in_usd desc LIMIT 12; 
+
+
+SELECT id, job_title, salary_in_usd FROM data_science_salaries ORDER BY salary_in_usd desc LIMIT 12; 
 
